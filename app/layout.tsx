@@ -1,3 +1,5 @@
+import ClientOnly from './components/ClientOnly'
+import Modal from './components/Modals/Modal'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
@@ -17,6 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
+        {/* <ClientOnly>
+          <Modal />
+          <Navbar />
+        </ClientOnly> */}
+        <Modal actionLabel='Submit' isOpen title='hello world' />
         <Navbar />
         {children}
       </body>
